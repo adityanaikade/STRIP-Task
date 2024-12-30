@@ -16,7 +16,7 @@ def create_driver():
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     # Set ProxyMesh (replace with your ProxyMesh credentials)
-    proxy = "http://adityanaikade:yBV.xek5qVBaf6H@us-west.proxy.proxymesh.com:31280"
+    proxy = "http://username:password@us-west.proxy.proxymesh.com:31280"
     chrome_options.add_argument(f"--proxy-server={proxy}")
 
     # Automatically manage ChromeDriver
@@ -41,12 +41,12 @@ def scrape_trending_topics():
 
         # Log in to X 
         username_field = driver.find_element(By.NAME, "text")
-        username_field.send_keys("AdityaNaikade")
+        username_field.send_keys("useername")
         username_field.submit()
         time.sleep(5)
 
         password_field = driver.find_element(By.NAME, "password")
-        password_field.send_keys("adyanaik@03")  
+        password_field.send_keys("password")  
         password_field.submit()
         time.sleep(5)
 
